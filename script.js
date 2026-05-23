@@ -102,6 +102,25 @@ const optionsContainer = document.getElementById('options-container');
 const progressBar = document.getElementById('progress-bar');
 const questionCounter = document.getElementById('question-counter');
 const progressText = document.getElementById('progress-text');
+const userCounterEl = document.getElementById('user-counter');
+
+// Live Counter via API
+const baseCount = 1248;
+async function fetchLiveCounter() {
+    if(userCounterEl) {
+        try {
+            const response = await fetch('https://api.counterapi.dev/v1/melhordistroparalinux/visits/up');
+            const data = await response.json();
+            
+            const total = baseCount + data.count;
+            userCounterEl.textContent = total.toLocaleString('pt-BR');
+        } catch (error) {
+            userCounterEl.textContent = baseCount.toLocaleString('pt-BR');
+        }
+    }
+}
+// Fetch and increment counter on load
+fetchLiveCounter();
 
 document.getElementById('start-btn').addEventListener('click', startQuiz);
 document.getElementById('restart-btn').addEventListener('click', restartQuiz);
