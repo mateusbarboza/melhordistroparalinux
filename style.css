@@ -645,3 +645,120 @@ p {
     45% { transform: scale(1.25); }
     60% { transform: scale(1); }
 }
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 15px;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h1 img {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    
+    p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 14px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero-logos {
+        margin-top: 30px;
+    }
+    
+    .logo-row {
+        gap: 12px;
+    }
+    
+    #question-text {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+    }
+    
+    .premium-result-card {
+        padding: 35px 20px 25px;
+    }
+    
+    .recommendation-badge {
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+        white-space: nowrap;
+    }
+    
+    .distro-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .distro-title-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .result-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    #distro-name {
+        font-size: 1.8rem;
+    }
+    
+    .features-list {
+        gap: 10px;
+    }
+    
+    .tags-container {
+        justify-content: center;
+    }
+    
+    .honorable-mentions {
+        padding: 20px 15px;
+    }
+    
+    .mention-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .mention-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .option-btn {
+        padding: 12px;
+    }
+    
+    .option-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    .option-content strong {
+        font-size: 1.05rem;
+    }
+}

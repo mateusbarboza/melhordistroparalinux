@@ -109,7 +109,10 @@ const baseCount = 1248;
 async function fetchLiveCounter() {
     if(userCounterEl) {
         try {
-            const response = await fetch('https://api.counterapi.dev/v1/melhordistroparalinux/visits/up');
+            // Add cache-busting to prevent mobile browsers from caching the GET request
+            const response = await fetch('https://api.counterapi.dev/v1/melhordistroparalinux/visits/up?t=' + Date.now(), {
+                cache: 'no-store'
+            });
             const data = await response.json();
             
             const total = baseCount + data.count;
